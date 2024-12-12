@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding/border does not add to element width */
+}
+
+body {
+    background-color: #0b0c10;
+    font-family: 'Inter';
+    color: white;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    width: 100%;
+}
+
+nav svg {
+    fill: white;
+    border-color: white;
+}
+
+.nav-items ul {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    background-color: #885efe;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.nav-items ul li {
+    list-style: none;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: inherit;
+    transition: font-size 0.3s;
+}
+
+.nav-items a:hover {
+    font-size: large;
+}
+
+.main {
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 600;
+    width: 60%;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.upload {
+    width: 20vw;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+label.file-btn {
+    padding: 12px 30px;
+    background-color: #885efe;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+label.file-btn:hover {
+    background-color: #5c38f1;
+}
+
+button {
+    padding: 12px 30px;
+    background-color: rgb(211, 92, 211);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(211, 92, 211);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Loading animation styles */
+.loading {
+    color: #885efe;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Result image styles */
+.result-img {
+    margin-top: 20px;
+    max-width: 80%;
+    border: 2px solid #885efe;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-items ul {
+        gap: 50px; /* Adjust gap for medium screens */
+    }
+
+    .main {
+        padding-top: 100px;
+    }
+
+    .title {
+        font-size: 32px; /* Adjust font size for medium screens */
+        width: 80%;
+    }
+
+    .upload {
+        width: 30vw; /* Increase width for medium screens */
+    }
+
+    button {
+        font-size: 16px; /* Adjust button font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .nav-items ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main {
+        padding-top: 80px;
+    }
+
+    .title {
+        font-size: 28px; /* Adjust font size for smaller screens */
+        width: 90%;
+    }
+
+    .upload {
+        width: 50vw; /* Adjust upload box width */
+    }
+
+    button {
+        font-size: 14px; /* Adjust button font size */
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        padding: 15px;
+    }
+
+    .nav-items ul {
+        gap: 15px;
+    }
+
+    .main {
+        padding-top: 60px;
+    }
+
+    .title {
+        font-size: 24px; /* Adjust font size for very small screens */
+        width: 100%;
+    }
+
+    .upload {
+        width: 70vw; /* Adjust width for very small screens */
+        padding: 20px;
+    }
+
+    label.file-btn {
+        font-size: 16px; /* Adjust button font size */
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
