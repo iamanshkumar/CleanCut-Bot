@@ -14,7 +14,7 @@ async function removeBg(blob) {
   // Make a POST request to the remove.bg API
   const response = await fetch("https://api.remove.bg/v1.0/removebg", {
     method: "POST",
-    headers: { "X-Api-Key": "qfVg5eiqLNUUxeXh8zCNHUGu" }, // API key for authentication
+    headers: { "X-Api-Key": "API KEY IS REMOVED DUE TO SECURITY REASONS" }, // API key for authentication
     body: formData,
   });
 
